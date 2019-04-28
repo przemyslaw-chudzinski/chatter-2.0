@@ -2,7 +2,7 @@
 
   <app-menu *ngIf="asideMenuItems && asideMenuItems.length">
 
-    <app-menu-item *ngFor="let item of asideMenuItems" [icon]="item.icon" [badges]="item.badges" [active]="item.active">
+    <app-menu-item *ngFor="let item of asideMenuItems" [iconName]="item.icon" [badges]="item.badges" [active]="item.active" [routerLink]="[item.route]" routerLinkActive="active">
 
       <span title>{{ item.title }}</span>
 
@@ -20,9 +20,9 @@
 
    <app-topbar-section>
 
-     <app-input icon="search">
+     <app-input iconName="search">
 
-       <input type="text" placeholder="Search messages">
+       <input appInput type="text" placeholder="Search messages">
 
      </app-input>
 

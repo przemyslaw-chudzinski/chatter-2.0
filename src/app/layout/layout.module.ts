@@ -7,13 +7,15 @@ import { MenuComponent } from './menu/menu.component';
 import { MenuItemComponent } from './menu/menu-item/menu-item.component';
 import {TopbarModule} from './topbar/topbar.module';
 import {UiModule} from '../ui/ui.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [LayoutComponent, AsideComponent, MainContentComponent, MenuComponent, MenuItemComponent],
   imports: [
     CommonModule,
     TopbarModule,
-    UiModule
+    UiModule,
+    RouterModule
   ],
   exports: [LayoutComponent, TopbarModule]
 })

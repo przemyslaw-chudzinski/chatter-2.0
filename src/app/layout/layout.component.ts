@@ -11,22 +11,17 @@ export class LayoutComponent {
     {
       id: 1,
       icon: 'home',
-      title: 'My page',
-      subtitle: 'This is awesome page!',
-      route: '',
-      badges: [
-        {
-          description: '',
-          value: 12
-        }
-      ]
+      title: 'Dashboard',
+      subtitle: null,
+      route: '/dashboard',
+      badges: []
     },
     {
       id: 2,
-      icon: 'envelope',
+      icon: 'comments',
       title: 'Chat',
-      route: '',
-      active: true,
+      subtitle: 'Talk with your team',
+      route: '/chat',
       badges: [
         {
           description: '',
@@ -36,10 +31,10 @@ export class LayoutComponent {
     },
     {
       id: 3,
-      icon: 'envelope',
+      icon: 'settings',
       title: 'Settings',
       subtitle: 'Change advanced elements',
-      route: '',
+      route: '/settings',
       badges: [
         {
           description: '',
@@ -49,8 +44,9 @@ export class LayoutComponent {
     },
     {
       id: 4,
-      icon: 'edit',
+      icon: 'done',
       title: 'Community',
+      route: '/community',
       badges: [
         {
           description: '',

@@ -20,14 +20,14 @@
 .active-primary-placeholder {
   color: $theme-color-01;
 
-  .icon {
+  app-icon {
     color: $theme-color-01;
   }
 
   border-left-color: $theme-color-01;
 }
 
-.icon {
+app-icon {
   display: flex;
   width: 5rem;
   margin-right: 2rem;

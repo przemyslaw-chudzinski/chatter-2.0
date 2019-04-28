@@ -7,23 +7,11 @@ import {Component, EventEmitter, HostBinding, HostListener, Input, Output} from 
 })
 export class MenuItemComponent {
 
-  @Input() icon: string = null;
+  @Input() iconName: string = null;
   @Input() badges: any[] = null;
   @Input() active: boolean;
 
   @Output() onClick = new EventEmitter<void>();
-
-  get iconCssClasses() {
-    const result = {
-      fa: this.icon && this.icon.length
-    };
-
-    if (this.icon) {
-      result['fa-' + this.icon] = true;
-    }
-
-    return result;
-  }
 
   @HostListener('click')
   handleHostClick(): void {

@@ -7,6 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class InputComponent {
 
-  @Input() icon: string = null;
-
+  @Input() iconName: string = null;
 }

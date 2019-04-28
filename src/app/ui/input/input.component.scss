@@ -1,0 +1,23 @@
+@import "../../../theme/variables";
+
+:host {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 16px;
+}
+
+:host /deep/ input[appInput],
+textarea[appInput] {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  color: $theme-color-04;
+  font-family: inherit;
+}
+
+.icon {
+  margin-right: 10px;
+  color: $theme-color-04;
+}

@@ -3,14 +3,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MenuItemComponent } from './menu-item.component';
 import {BadgeComponent} from '../../../ui/badge/badge.component';
 import {By} from '@angular/platform-browser';
+import {IconComponent} from '../../../ui/icon/icon.component';
+import {ICON_DEFINITION_STUMB_PROVIDER} from '../../../../stumbs/icon-definition-stumb';
 
-fdescribe('MenuItemComponent', () => {
+describe('MenuItemComponent', () => {
   let component: MenuItemComponent;
   let fixture: ComponentFixture<MenuItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MenuItemComponent, BadgeComponent ]
+      declarations: [ MenuItemComponent, BadgeComponent, IconComponent ],
+      providers: [ICON_DEFINITION_STUMB_PROVIDER]
     })
     .compileComponents();
   }));
@@ -25,12 +28,6 @@ fdescribe('MenuItemComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have span with fa fa-envelope class when it gets envelope icon input property', () => {
-    component.icon = 'envelope';
-    fixture.detectChanges();
-    expect(fixture.debugElement.query(By.css('span.fa.fa-envelope'))).toBeTruthy();
-  });
-
   it ('should have Badge component when badges input property has length greater than 0', () => {
     component.badges = [{value: 1, color: 'primary'}];
     fixture.detectChanges();
@@ -41,6 +38,12 @@ fdescribe('MenuItemComponent', () => {
     spyOn(component, 'handleHostClick');
     fixture.nativeElement.click();
     expect(component.handleHostClick).toHaveBeenCalled();
+  });
+
+  it('should have app-icon component whe he gets iconName property', () => {
+    component.iconName = 'any';
+    fixture.detectChanges();
+    expect(fixture.debugElement.query(By.css('app-icon'))).toBeTruthy();
   });
 
   describe('whenIsActive method', () => {
