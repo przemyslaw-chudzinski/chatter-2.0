@@ -1,7 +1,12 @@
 <app-contacts-list>
 
-<!--  <div>lista kontaktów</div>-->
+  <nav *ngIf="contactFilters && contactFilters.length" appTabNavBar header>
+
+    <a *ngFor="let filter of contactFilters" appTabLink [active]="filter.id === activeFilter">{{ filter.text }}</a>
+
+  </nav>
 
 </app-contacts-list>
+
 <!--<div style="height: 100%; flex-grow: 1">messages</div>-->
 <!--<div style="width: 300px;">contact profile info</div>-->

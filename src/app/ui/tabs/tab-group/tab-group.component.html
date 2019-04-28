@@ -1,0 +1,3 @@
+<app-tab-header *ngIf="tabLabels && tabLabels.length" [tabLabels]="tabLabels" [activeIndex]="currentIndex" (labelClicked)="showTab($event)"></app-tab-header>
+
+<ng-container #tabOutlet></ng-container>

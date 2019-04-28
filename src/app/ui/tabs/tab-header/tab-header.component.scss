@@ -1,0 +1,13 @@
+@import "../../../../theme/theme";
+
+:host {
+  @extend .tab-header-placeholder;
+}
+
+.tab-item {
+  @extend .tab-item-placeholder;
+}
+
+.tab-item.active {
+  @extend .active-tab-placeholder;
+}

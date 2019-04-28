@@ -1,0 +1,9 @@
+<ng-container *ngIf="tabLabels && tabLabels.length">
+
+  <div class="tab-item" *ngFor="let tabLabel of tabLabels" (click)="labelClicked.emit(tabLabel)" [ngClass]="activeClass(tabLabel.index)">
+
+    {{ tabLabel.label }}
+
+  </div>
+
+</ng-container>

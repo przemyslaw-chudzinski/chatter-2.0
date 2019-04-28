@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IndexPageComponent } from './index-page.component';
+import {ContactsListComponent} from '../../../contacts/contacts-list/contacts-list.component';
+import {ContactsModule} from '../../../contacts/contacts.module';
 
 describe('IndexPageComponent', () => {
   let component: IndexPageComponent;
@@ -8,7 +10,8 @@ describe('IndexPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndexPageComponent ]
+      declarations: [ IndexPageComponent ],
+      imports: [ContactsModule]
     })
     .compileComponents();
   }));

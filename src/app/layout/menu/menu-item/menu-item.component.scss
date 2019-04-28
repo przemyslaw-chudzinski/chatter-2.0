@@ -8,7 +8,7 @@
   cursor: pointer;
   border-left-color: transparent;
   border-left-style: solid;
-  border-left-width: 4px;
+  border-left-width: $global-border-width * 1.5;
   min-height: 70px;
 
   &:hover {
@@ -45,6 +45,7 @@ app-icon {
 
 .content {
   display: flex;
+  align-items: center;
 }
 
 .badges {

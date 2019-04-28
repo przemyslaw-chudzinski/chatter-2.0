@@ -1,11 +1,16 @@
-@import "../../../theme/variables";
+@import "../../../theme/theme";
 
 :host {
   display: flex;
   flex-flow: column;
-  box-shadow: $box-shadow;
+  border-right: 1px solid $global-border-color;
+  //box-shadow: $box-shadow;
 }
 
 .content {
   flex-grow: 1;
+}
+
+.header {
+  border-bottom: 1px solid $global-border-color;
 }

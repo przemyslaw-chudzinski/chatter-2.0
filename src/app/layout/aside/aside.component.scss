@@ -1,6 +1,9 @@
+@import "../../../theme/theme";
+
 :host {
   display: flex;
   flex-flow: column;
+  border-right: 1px solid $global-border-color;
 }
 
 .header {
