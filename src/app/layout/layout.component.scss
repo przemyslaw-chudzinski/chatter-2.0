@@ -1,0 +1,18 @@
+@import "../../theme/variables";
+
+:host {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+app-aside {
+  width: 400px;
+  height: 100%;
+}
+
+app-main-content {
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+}

@@ -1,0 +1,44 @@
+<app-aside>
+
+  <app-menu *ngIf="asideMenuItems && asideMenuItems.length">
+
+    <app-menu-item *ngFor="let item of asideMenuItems" [icon]="item.icon" [badges]="item.badges" [active]="item.active">
+
+      <span title>{{ item.title }}</span>
+
+      <span *ngIf="item && item.subtitle" subtitle>{{ item.subtitle }}</span>
+
+    </app-menu-item>
+
+  </app-menu>
+
+</app-aside>
+
+<app-main-content>
+
+  <app-topbar>
+
+   <app-topbar-section>
+
+     <app-input icon="search">
+
+       <input type="text" placeholder="Search messages">
+
+     </app-input>
+
+   </app-topbar-section>
+
+    <app-topbar-section right>
+      notifications btn
+    </app-topbar-section>
+
+    <app-topbar-section right>
+      user dropdown menu
+    </app-topbar-section>
+
+  </app-topbar>
+
+  <ng-content></ng-content>
+
+
+</app-main-content>

@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  height: 5rem;
+}
+
+.content {
+  flex-grow: 1;
+}
+

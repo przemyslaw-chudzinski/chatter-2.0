@@ -1,0 +1,17 @@
+@import "../../../theme/variables";
+$main-content-height: 5rem;
+
+:host {
+  display: block;
+  position: relative;
+  padding-top: $main-content-height;
+}
+
+.top {
+  background: $theme-color-02;
+  position: fixed;
+  top: 0;
+  left: 400px;
+  right: 0;
+  height: $main-content-height;
+}

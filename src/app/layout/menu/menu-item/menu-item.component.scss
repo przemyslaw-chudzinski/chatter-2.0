@@ -1,0 +1,70 @@
+@import "../../../../theme/variables";
+
+:host {
+  display: flex;
+  width: 100%;
+  font-size: 16px;
+  padding: 1rem 0;
+  cursor: pointer;
+  border-left-color: transparent;
+  border-left-style: solid;
+  border-left-width: 4px;
+  min-height: 70px;
+
+  &:hover {
+    @extend .active-primary-placeholder;
+  }
+
+}
+
+.active-primary-placeholder {
+  color: $theme-color-01;
+
+  .icon {
+    color: $theme-color-01;
+  }
+
+  border-left-color: $theme-color-01;
+}
+
+.icon {
+  display: flex;
+  width: 5rem;
+  margin-right: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  color: $theme-color-04;
+}
+
+.title {
+  font-weight: 700;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+}
+
+.badges {
+  display: flex;
+}
+
+app-badge {
+  margin-left: 1.5rem;
+}
+
+:host /deep/ *[subtitle] {
+  font-size: 10px;
+  color: $theme-color-04;
+  margin-top: .5rem;
+}
+
+:host /deep/ *[title] {
+
+}
+
+:host(.active) {
+  @extend .active-primary-placeholder;
+}

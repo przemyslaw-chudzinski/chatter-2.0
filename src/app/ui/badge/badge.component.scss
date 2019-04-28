@@ -1,0 +1,20 @@
+@import "../../../theme/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+}
+
+:host(.theme-secondary) {
+  background: $theme-color-03;
+}
+
+:host(.theme-primary) {
+  background: $theme-color-01;
+}

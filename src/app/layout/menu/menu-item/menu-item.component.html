@@ -1,0 +1,19 @@
+<span *ngIf="icon" [ngClass]="iconCssClasses" class="icon"></span>
+
+<div class="content">
+
+  <div class="title">
+
+    <ng-content></ng-content>
+
+    <ng-content select="[subtitle]"></ng-content>
+
+  </div>
+
+  <div *ngIf="badges" class="badges">
+
+      <app-badge *ngFor="let badge of badges" [value]="badge.value" [color]="badge.color"></app-badge>
+
+  </div>
+
+</div>
