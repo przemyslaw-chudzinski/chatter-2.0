@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ChatPagesComponent } from './chat-pages.component';
 import { IndexPageComponent } from './index-page/index-page.component';
 import {RouterModule, Routes} from '@angular/router';
+import {ContactsModule} from '../../contacts/contacts.module';
+import {UiModule} from '../../ui/ui.module';
 
 const routes: Routes = [
   {
@@ -15,7 +17,9 @@ const routes: Routes = [
   declarations: [ChatPagesComponent, IndexPageComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ContactsModule,
+    UiModule
   ]
 })
 export class ChatPagesModule { }

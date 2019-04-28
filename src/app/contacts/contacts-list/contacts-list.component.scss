@@ -1,0 +1,11 @@
+@import "../../../theme/variables";
+
+:host {
+  display: flex;
+  flex-flow: column;
+  box-shadow: $box-shadow;
+}
+
+.content {
+  flex-grow: 1;
+}
