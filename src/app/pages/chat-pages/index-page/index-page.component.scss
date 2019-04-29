@@ -1,4 +1,4 @@
-@import "../../../../theme/variables";
+@import "../../../../theme/theme";
 
 :host {
   display: flex;
@@ -8,4 +8,11 @@
 app-contacts-list {
   width: 350px;
   height: 100%;
+
+  app-contact-card {
+    &:not(:last-child) {
+      border-bottom: 1px solid $global-border-color;
+    }
+  }
+
 }

@@ -12,11 +12,13 @@ export class SliceWordsPipe implements PipeTransform {
       return '';
     }
 
-    if (value && value.length < max) {
+    const wordsNumber = value.split(' ').length;
+
+    if (wordsNumber < max) {
       return value;
     }
 
-    return value.split(' ').filter((_, index) => index < max - 1).join(' ') + '...';
+    return value.split(' ').filter((_, index) => index < max).join(' ') + '...';
   }
 
 }
