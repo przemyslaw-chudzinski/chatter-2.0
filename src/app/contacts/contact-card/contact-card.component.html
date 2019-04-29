@@ -1,28 +1,32 @@
-<app-avatar *ngIf="contact.avatar" [url]="contact.avatar.url" [active]="online"></app-avatar>
+<ng-container *ngIf="contact">
 
-<div class="contact">
+  <app-avatar *ngIf="contact.avatar" [url]="contact.avatar.url" [active]="online"></app-avatar>
 
-  <div class="contact-info">
+  <div class="contact">
 
-    <span class="contact-info-name" [ngClass]="{'has-unread-messages': hasUnreadMessages}">{{ contact.name }}</span>
+    <div class="contact-info">
 
-    <span class="contact-info-meta">35 min ago</span>
+      <span class="contact-info-name" [ngClass]="{'has-unread-messages': hasUnreadMessages}">{{ contact.name }}</span>
 
-  </div>
+      <span class="contact-info-meta">35 min ago</span>
 
-  <div *ngIf="contact.lastMessage" class="message">
+    </div>
 
-    <div class="message-content">{{ contact.lastMessage.content | sliceWords:7 }}</div>
+    <div *ngIf="contact.lastMessage" class="message">
 
-    <div class="message-meta">
+      <div class="message-content">{{ contact.lastMessage.content | sliceWords:7 }}</div>
 
-      <!-- Message read -->
-<!--      <app-icon iconName="done_all" color="primary"></app-icon>-->
+      <div class="message-meta">
 
-      <app-badge *ngIf="hasUnreadMessages" [value]="contact.unreadMessagesNumber" color="secondary"></app-badge>
+        <!-- Message read -->
+        <!--      <app-icon iconName="done_all" color="primary"></app-icon>-->
+
+        <app-badge *ngIf="hasUnreadMessages" [value]="contact.unreadMessagesNumber" color="secondary"></app-badge>
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
+</ng-container>
