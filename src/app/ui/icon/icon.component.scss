@@ -1,5 +1,15 @@
+@import "../../../theme/theme";
+
 :host {
   display: block;
+}
+
+:host(.theme-primary) {
+  color: $theme-color-01;
+}
+
+:host(.theme-secondary) {
+  color: $theme-color-03;
 }
 
 //.iconName {

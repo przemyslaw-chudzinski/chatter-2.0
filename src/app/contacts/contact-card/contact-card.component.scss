@@ -1,15 +1,62 @@
+@import "../../../theme/theme";
+
 :host {
   display: flex;
   height: 80px;
-  //align-items: center;
-  //justify-content: center;
   padding: 0 15px;
+  border-bottom: 1px solid $global-border-color;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    background: $theme-color-02;
+  }
+
 }
 
 .contact {
   flex-grow: 1;
 }
 
-:host /deep/ *:first-child {
+app-avatar {
   margin-right: 30px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info-name {
+  font-size: $global-font-size * 1.5;
+  color: $theme-color-04;
+}
+
+.contact-info-meta {
+  color: $theme-color-04;
+  font-size: $global-font-size * 1.2;
+}
+
+.message {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-content {
+  width: 80%;
+  color: $theme-color-04;
+  font-size: $global-font-size * 1.2;
+}
+
+.message-meta {
+  flex-grow: 1;
+}
+
+.message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //font-size: $global-font-size * .6;
+
 }

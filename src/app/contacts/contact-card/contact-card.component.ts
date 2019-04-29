@@ -8,5 +8,6 @@ import {Component, Input} from '@angular/core';
 export class ContactCardComponent {
 
   @Input() contact: any;
+  @Input() online: boolean;
 
 }

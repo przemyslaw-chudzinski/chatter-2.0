@@ -1,9 +1,29 @@
-<ng-content></ng-content>
+<app-avatar *ngIf="contact.avatar" [url]="contact.avatar.url"></app-avatar>
 
 <div class="contact">
 
-  <div></div>
+  <div class="contact-info">
 
-  <div class="message">{{ contact.lastMessage.content }}</div>
+    <span class="contact-info-name">{{ contact.name }}</span>
+
+    <span class="contact-info-meta">35 min ago</span>
+
+  </div>
+
+  <div *ngIf="contact.lastMessage" class="message">
+
+    <div class="message-content">{{ contact.lastMessage.content | sliceWords:7 }}</div>
+
+    <div class="message-meta">
+
+      <!-- Message read -->
+      <app-icon iconName="done_all" color="primary"></app-icon>
+
+      <!-- Messages unread -->
+<!--      <app-badge value="3" color="secondary"></app-badge>-->
+
+    </div>
+
+  </div>
 
 </div>
