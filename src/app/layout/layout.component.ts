@@ -58,6 +58,14 @@ export class LayoutComponent {
           color: 'primary'
         }
       ]
+    },
+    {
+      id: 4,
+      icon: 'build',
+      title: 'Tests',
+      subtitle: 'Only for tests',
+      route: '/tests',
+      badges: []
     }
   ];
 
