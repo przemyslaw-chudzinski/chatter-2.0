@@ -6,6 +6,16 @@
 
   </nav>
 
+  <div *ngIf="contactLists && contactLists.length">
+
+    <app-contact-card *ngFor="let contact of contactLists" [contact]="contact">
+
+      <app-avatar></app-avatar>
+
+    </app-contact-card>
+
+  </div>
+
 </app-contacts-list>
 
 <!--<div style="height: 100%; flex-grow: 1">messages</div>-->
