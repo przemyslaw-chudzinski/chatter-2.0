@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
 import {ThemeColor} from '../../../types/theme-color.types';
+import {TabContext} from '../tab-context';
 
 @Component({
   selector: 'app-tab-group',
@@ -20,7 +21,7 @@ import {ThemeColor} from '../../../types/theme-color.types';
 export class TabGroupComponent implements AfterContentInit {
 
   @Input() theme: ThemeColor = 'primary';
-  @Input() controlsTemplate: TemplateRef<any>;
+  @Input() controlsTemplate: TemplateRef<TabContext>;
 
   @ContentChildren(TabComponent) private tabs = new QueryList<TabComponent>();
   @ViewChild('tabOutlet', {read: ViewContainerRef}) tabOutlet: ViewContainerRef;
@@ -48,14 +49,14 @@ export class TabGroupComponent implements AfterContentInit {
     return this.tabs.map(({label}, index) => ({label, index}));
   }
 
-  get getControlsCtx(): any {
+  get getControlsCtx(): TabContext {
     return {
       $implicit: this.tabLabels,
       showTab: this.showTab.bind(this)
     };
   }
 
-  showTab(label: any) {
+  showTab(label: any): boolean | number {
     if (!label || label.index === this.currentIndex) {
       return false;
     }
@@ -63,6 +64,7 @@ export class TabGroupComponent implements AfterContentInit {
     this.tabOutlet.clear();
     this.currentIndex = label.index;
     this.tabOutlet.createEmbeddedView(this.tabs.toArray()[this.currentIndex].template);
+    return this.currentIndex;
   }
 
 }

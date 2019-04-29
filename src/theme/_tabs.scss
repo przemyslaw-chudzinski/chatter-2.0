@@ -53,3 +53,16 @@ $tabs-border-color: $theme-color-01;
     border-bottom-color: $theme-color-03;
   }
 }
+
+.tab-item {
+  @extend .tab-item-placeholder;
+}
+
+.tab-labels-stretched .tab-item {
+  @extend .tab-item-placeholder;
+  background: red;
+}
+
+.tab-item.active {
+  @extend .active-tab-placeholder;
+}

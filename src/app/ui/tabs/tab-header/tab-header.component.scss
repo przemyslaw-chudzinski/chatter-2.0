@@ -4,13 +4,18 @@
   @extend .tab-header-placeholder;
 }
 
-.tab-item {
-  @extend .tab-item-placeholder;
-}
-
-.tab-item.active {
-  @extend .active-tab-placeholder;
-}
+//.tab-item {
+//  @extend .tab-item-placeholder;
+//}
+//
+//.tab-labels-stretched .tab-item {
+//  @extend .tab-item-placeholder;
+//  background: red;
+//}
+//
+//.tab-item.active {
+//  @extend .active-tab-placeholder;
+//}
 
 :host-context(.theme-primary) {
   .tab-item.active {
