@@ -8,7 +8,7 @@
 
   <div *ngIf="contactLists && contactLists.length">
 
-    <app-contact-card *ngFor="let contact of contactLists" [contact]="contact"></app-contact-card>
+    <app-contact-card *ngFor="let contact of contactLists" [contact]="contact" [online]="contact.online"></app-contact-card>
 
   </div>
 

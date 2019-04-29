@@ -137,7 +137,7 @@ export class IndexPageComponent {
       unreadMessagesNumber: 0
     },
 
-  ];
+  ].map(item => ({...item, online: Math.random() >= .5}));
 
   activeFilter = 1;
 
