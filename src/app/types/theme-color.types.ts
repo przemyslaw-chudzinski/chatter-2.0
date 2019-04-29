@@ -1,1 +1,1 @@
-export type themeColor = 'primary' | 'secondary';
+export type ThemeColor = 'primary' | 'secondary';

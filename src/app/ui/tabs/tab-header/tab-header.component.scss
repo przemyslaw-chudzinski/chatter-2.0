@@ -11,3 +11,15 @@
 .tab-item.active {
   @extend .active-tab-placeholder;
 }
+
+:host-context(.theme-primary) {
+  .tab-item.active {
+    border-bottom-color: $theme-color-01;
+  }
+}
+
+:host-context(.theme-secondary) {
+  .tab-item.active {
+    border-bottom-color: $theme-color-03;
+  }
+}

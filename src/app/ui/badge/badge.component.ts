@@ -1,5 +1,5 @@
 import {Component, HostBinding, Input} from '@angular/core';
-import {themeColor} from '../../types/theme-color.types';
+import {ThemeColor} from '../../types/theme-color.types';
 
 @Component({
   selector: 'app-badge',
@@ -9,7 +9,7 @@ import {themeColor} from '../../types/theme-color.types';
 export class BadgeComponent {
 
   @Input() value: number = null;
-  @Input() color: themeColor = 'secondary';
+  @Input() color: ThemeColor = 'secondary';
 
   @HostBinding('class')
   get cssClasses() {

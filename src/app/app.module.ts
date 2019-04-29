@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {LayoutModule} from './layout/layout.module';
 import {RouterModule, Routes} from '@angular/router';
-import {environment} from '../environments/environment';
 
 const routes: Routes = [
   {
@@ -23,7 +22,7 @@ const routes: Routes = [
     redirectTo: '/dashboard',
     pathMatch: 'full'
   }
-].filter(route => route.path === 'tests' && !environment.production);
+];
 
 @NgModule({
   declarations: [

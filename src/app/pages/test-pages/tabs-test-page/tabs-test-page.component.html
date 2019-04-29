@@ -1,0 +1,71 @@
+<h1>Tabs Component</h1>
+
+<app-tab-group theme="primary">
+
+  <app-tab label="Angular">
+    to jest jakaś zakładka 1
+  </app-tab>
+
+  <app-tab label="Vue">
+    to jest jakaś zakładka 2
+  </app-tab>
+
+  <app-tab label="React">
+    to jest jakaś zakładka 3
+  </app-tab>
+
+</app-tab-group>
+
+<app-tab-group theme="secondary">
+
+  <app-tab label="Angular">
+    to jest jakaś zakładka 1
+  </app-tab>
+
+  <app-tab label="Vue">
+    to jest jakaś zakładka 2
+  </app-tab>
+
+  <app-tab label="React">
+    to jest jakaś zakładka 3
+  </app-tab>
+
+</app-tab-group>
+
+<h1>Tabs with custom navigation</h1>
+
+<app-tab-group [controlsTemplate]="customControlsTpl">
+
+  <app-tab label="Angular">
+    to jest jakaś zakładka 1
+  </app-tab>
+
+  <app-tab label="Vue">
+    to jest jakaś zakładka 2
+  </app-tab>
+
+  <app-tab label="React">
+    to jest jakaś zakładka 3
+  </app-tab>
+
+</app-tab-group>
+
+<ng-template #customControlsTpl let-tabs let-showTab="showTab">
+    <ul>
+      <li *ngFor="let tab of tabs" (click)="showTab(tab)">{{ tab.label }}</li>
+    </ul>
+</ng-template>
+
+<h1>Tabs as links</h1>
+
+<nav appTabNavBar>
+  <a href="" appTabLink [active]="true">Page first</a>
+  <a href="" appTabLink>Page second</a>
+  <a href="" appTabLink>Page third</a>
+</nav>
+
+<nav appTabNavBar theme="secondary">
+  <a href="" appTabLink [active]="true">Page first</a>
+  <a href="" appTabLink>Page second</a>
+  <a href="" appTabLink>Page third</a>
+</nav>

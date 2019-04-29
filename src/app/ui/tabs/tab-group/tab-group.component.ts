@@ -1,5 +1,16 @@
-import {AfterContentInit, Component, ContentChildren, QueryList, ViewChild, ViewContainerRef} from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  HostBinding,
+  Input,
+  QueryList,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
+import {ThemeColor} from '../../../types/theme-color.types';
 
 @Component({
   selector: 'app-tab-group',
@@ -7,6 +18,9 @@ import {TabComponent} from '../tab/tab.component';
   styleUrls: ['./tab-group.component.scss']
 })
 export class TabGroupComponent implements AfterContentInit {
+
+  @Input() theme: ThemeColor = 'primary';
+  @Input() controlsTemplate: TemplateRef<any>;
 
   @ContentChildren(TabComponent) private tabs = new QueryList<TabComponent>();
   @ViewChild('tabOutlet', {read: ViewContainerRef}) tabOutlet: ViewContainerRef;
@@ -17,12 +31,28 @@ export class TabGroupComponent implements AfterContentInit {
     this.tabs.length && this.tabOutlet.createEmbeddedView(this.tabs.first.template);
   }
 
+  @HostBinding('class')
+  get cssClasses() {
+    switch (this.theme) {
+      case 'primary': return 'theme-primary';
+      case 'secondary': return 'theme-secondary';
+      default: return 'theme-secondary';
+    }
+  }
+
   get tabLabels(): any[] {
     if (!this.tabs.length) {
       return [];
     }
 
     return this.tabs.map(({label}, index) => ({label, index}));
+  }
+
+  get getControlsCtx(): any {
+    return {
+      $implicit: this.tabLabels,
+      showTab: this.showTab.bind(this)
+    };
   }
 
   showTab(label: any) {
