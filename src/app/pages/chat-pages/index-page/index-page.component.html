@@ -1,6 +1,6 @@
 <app-contacts-list>
 
-  <nav *ngIf="contactFilters && contactFilters.length" appTabNavBar header>
+  <nav *ngIf="contactFilters && contactFilters.length" theme="primary" appTabNavBar header>
 
     <a *ngFor="let filter of contactFilters" appTabLink [active]="filter.id === activeFilter">{{ filter.text }}</a>
 

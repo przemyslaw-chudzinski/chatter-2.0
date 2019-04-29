@@ -4,10 +4,27 @@
   @extend .tab-header-placeholder;
 }
 
-.tab-item {
-  @extend .tab-item-placeholder;
+//.tab-item {
+//  @extend .tab-item-placeholder;
+//}
+//
+//.tab-labels-stretched .tab-item {
+//  @extend .tab-item-placeholder;
+//  background: red;
+//}
+//
+//.tab-item.active {
+//  @extend .active-tab-placeholder;
+//}
+
+:host-context(.theme-primary) {
+  .tab-item.active {
+    border-bottom-color: $theme-color-01;
+  }
 }
 
-.tab-item.active {
-  @extend .active-tab-placeholder;
+:host-context(.theme-secondary) {
+  .tab-item.active {
+    border-bottom-color: $theme-color-03;
+  }
 }

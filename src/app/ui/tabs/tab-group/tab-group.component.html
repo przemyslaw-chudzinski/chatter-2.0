@@ -1,3 +1,9 @@
-<app-tab-header *ngIf="tabLabels && tabLabels.length" [tabLabels]="tabLabels" [activeIndex]="currentIndex" (labelClicked)="showTab($event)"></app-tab-header>
+<ng-container [ngTemplateOutlet]="controlsTemplate || defaultControlsTpl" [ngTemplateOutletContext]="getControlsCtx"></ng-container>
 
 <ng-container #tabOutlet></ng-container>
+
+<ng-template #defaultControlsTpl let-tabs let-showTab="showTab">
+
+  <app-tab-header *ngIf="tabs && tabs.length" [tabLabels]="tabs" [activeIndex]="currentIndex" (labelClicked)="showTab($event)"></app-tab-header>
+
+</ng-template>

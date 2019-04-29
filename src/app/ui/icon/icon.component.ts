@@ -1,6 +1,6 @@
 import {Component, HostBinding, Inject, Input} from '@angular/core';
 import {ICON_DEFINITION_TOKEN} from './icon-definitions/icon-definition-token';
-import {themeColor} from '../../types/theme-color.types';
+import {ThemeColor} from '../types/theme-color.types';
 
 @Component({
   selector: 'app-icon',
@@ -10,7 +10,7 @@ import {themeColor} from '../../types/theme-color.types';
 export class IconComponent {
 
   @Input() iconName: string = null;
-  @Input() color: themeColor = null;
+  @Input() color: ThemeColor = null;
 
   @HostBinding('class')
   get cssClasses() {

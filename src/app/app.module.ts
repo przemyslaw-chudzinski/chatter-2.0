@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren: 'src/app/pages/chat-pages/chat-pages.module#ChatPagesModule'
   },
   {
+    path: 'tests',
+    loadChildren: 'src/app/pages/test-pages/test-pages.module#TestPagesModule'
+  },
+  {
     path: '**',
     redirectTo: '/dashboard',
     pathMatch: 'full'
