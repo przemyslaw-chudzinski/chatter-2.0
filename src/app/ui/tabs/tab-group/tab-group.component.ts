@@ -10,7 +10,7 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import {TabComponent} from '../tab/tab.component';
-import {ThemeColor} from '../../../types/theme-color.types';
+import {ThemeColor} from '../../types/theme-color.types';
 import {TabContext} from '../tab-context';
 
 @Component({
@@ -32,14 +32,14 @@ export class TabGroupComponent implements AfterContentInit {
     this.tabs.length && this.tabOutlet.createEmbeddedView(this.tabs.first.template);
   }
 
-  @HostBinding('class')
-  get cssClasses() {
-    switch (this.theme) {
-      case 'primary': return 'theme-primary';
-      case 'secondary': return 'theme-secondary';
-      default: return 'theme-secondary';
-    }
-  }
+  // @HostBinding('class')
+  // get cssClasses() {
+  //   switch (this.theme) {
+  //     case 'primary': return 'theme-primary';
+  //     case 'secondary': return 'theme-secondary';
+  //     default: return 'theme-secondary';
+  //   }
+  // }
 
   get tabLabels(): any[] {
     if (!this.tabs.length) {

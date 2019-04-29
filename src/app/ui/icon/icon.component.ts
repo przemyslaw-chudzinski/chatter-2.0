@@ -1,6 +1,6 @@
 import {Component, HostBinding, Inject, Input} from '@angular/core';
 import {ICON_DEFINITION_TOKEN} from './icon-definitions/icon-definition-token';
-import {ThemeColor} from '../../types/theme-color.types';
+import {ThemeColor} from '../types/theme-color.types';
 
 @Component({
   selector: 'app-icon',

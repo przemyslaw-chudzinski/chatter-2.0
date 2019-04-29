@@ -60,7 +60,7 @@ $tabs-border-color: $theme-color-01;
 
 .tab-labels-stretched .tab-item {
   @extend .tab-item-placeholder;
-  background: red;
+  width: 100% !important;
 }
 
 .tab-item.active {

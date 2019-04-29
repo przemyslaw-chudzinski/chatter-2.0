@@ -1,6 +1,6 @@
 <h1>Tabs Component</h1>
 
-<app-tab-group theme="primary">
+<app-tab-group appThemeProvider theme="primary">
 
   <app-tab label="Angular">
     to jest jakaś zakładka 1
@@ -16,7 +16,7 @@
 
 </app-tab-group>
 
-<app-tab-group theme="secondary">
+<app-tab-group appThemeProvider theme="secondary">
 
   <app-tab label="Angular">
     to jest jakaś zakładka 1
@@ -58,7 +58,7 @@
 
 <h1>Tab group with stretched labels </h1>
 
-<app-tab-group appStretchTabs theme="secondary">
+<app-tab-group appThemeProvider appStretchTabs theme="secondary">
 
   <app-tab label="Angular">
     to jest jakaś zakładka 1
@@ -82,7 +82,7 @@
   <a href="" appTabLink>Page third</a>
 </nav>
 
-<nav appTabNavBar theme="secondary">
+<nav appTabNavBar appThemeProvider theme="secondary">
   <a href="" appTabLink [active]="true">Page first</a>
   <a href="" appTabLink>Page second</a>
   <a href="" appTabLink>Page third</a>

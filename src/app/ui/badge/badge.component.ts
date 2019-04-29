@@ -1,5 +1,5 @@
 import {Component, HostBinding, Input} from '@angular/core';
-import {ThemeColor} from '../../types/theme-color.types';
+import {ThemeColor} from '../types/theme-color.types';
 
 @Component({
   selector: 'app-badge',
