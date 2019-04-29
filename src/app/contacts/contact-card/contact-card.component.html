@@ -1,10 +1,10 @@
-<app-avatar *ngIf="contact.avatar" [url]="contact.avatar.url"></app-avatar>
+<app-avatar *ngIf="contact.avatar" [url]="contact.avatar.url" [active]="active"></app-avatar>
 
 <div class="contact">
 
   <div class="contact-info">
 
-    <span class="contact-info-name">{{ contact.name }}</span>
+    <span class="contact-info-name" [ngClass]="{'has-unread-messages': hasUnreadMessages}">{{ contact.name }}</span>
 
     <span class="contact-info-meta">35 min ago</span>
 
@@ -17,10 +17,9 @@
     <div class="message-meta">
 
       <!-- Message read -->
-      <app-icon iconName="done_all" color="primary"></app-icon>
+<!--      <app-icon iconName="done_all" color="primary"></app-icon>-->
 
-      <!-- Messages unread -->
-<!--      <app-badge value="3" color="secondary"></app-badge>-->
+      <app-badge *ngIf="hasUnreadMessages" [value]="contact.unreadMessagesNumber" color="secondary"></app-badge>
 
     </div>
 

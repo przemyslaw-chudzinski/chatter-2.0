@@ -32,6 +32,11 @@ app-avatar {
   color: $theme-color-04;
 }
 
+.contact-info-name.has-unread-messages {
+  font-weight: 700;
+  color: $theme-color-05;
+}
+
 .contact-info-meta {
   color: $theme-color-04;
   font-size: $global-font-size * 1.2;

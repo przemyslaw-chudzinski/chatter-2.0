@@ -10,4 +10,7 @@ export class ContactCardComponent {
   @Input() contact: any;
   @Input() online: boolean;
 
+  get hasUnreadMessages(): boolean {
+    return this.contact.unreadMessagesNumber && this.contact.unreadMessagesNumber > 0;
+  }
 }
