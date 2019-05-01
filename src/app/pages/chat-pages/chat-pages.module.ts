@@ -9,7 +9,16 @@ import {UiModule} from '../../ui/ui.module';
 const routes: Routes = [
   {
     path: '',
-    component: IndexPageComponent
+    component: ChatPagesComponent,
+    children: [
+      {
+        path: ':contactId'
+      },
+      {
+        path: '',
+        component: IndexPageComponent
+      }
+    ]
   }
 ];
 
