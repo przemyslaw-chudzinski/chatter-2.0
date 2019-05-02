@@ -1,1 +1,17 @@
+<app-card>
+
+  <nav *ngIf="contactFilters && contactFilters.length" theme="primary" appTabNavBar header>
+
+    <a *ngFor="let filter of contactFilters" appTabLink [active]="filter.id === activeFilter">{{ filter.text }}</a>
+
+  </nav>
+
+  <div *ngIf="contactLists && contactLists.length">
+
+    <app-contact-card *ngFor="let contact of contactLists" [contact]="contact" [online]="contact.online" [routerLink]="['member', '123']"></app-contact-card>
+
+  </div>
+
+</app-card>
+
 <router-outlet></router-outlet>

@@ -1,0 +1,13 @@
+<div style="height: 100%; flex-grow: 1;background: #e2e2e2">messages</div>
+
+<app-card>
+
+  <nav *ngIf="chatExtraRoutes && chatExtraRoutes.length" appThemeProvider appTabNavBar header theme="secondary">
+
+    <a *ngFor="let extraRoute of chatExtraRoutes" appTabLink  [routerLink]="[{outlets: {details: extraRoute.route}}]" routerLinkActive="active">{{ extraRoute.text }}</a>
+
+  </nav>
+
+  <router-outlet name="details"></router-outlet>
+
+</app-card>

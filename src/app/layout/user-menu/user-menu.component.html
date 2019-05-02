@@ -1,0 +1,23 @@
+<app-list appDropdownMenu>
+
+  <app-list-item appDropdownMenuItem *ngFor="let item of menuItems" (click)="dropdownRef.close($event)">
+
+   <div class="menu-item">
+
+     <app-icon appThemeProvider [theme]="item.theme" [iconName]="item.iconName"></app-icon>
+
+     <span>{{ item.label }}</span>
+
+   </div>
+
+  </app-list-item>
+
+  <app-list-item appDropdownMenuItem (click)="dropdownRef.close($event)">
+
+    <app-icon appThemeProvider theme="secondary" iconName="exit_to_app"></app-icon>
+
+    <span>Logout</span>
+
+  </app-list-item>
+
+</app-list>

@@ -1,0 +1,63 @@
+@import "../../../../../theme/theme";
+
+:host {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+app-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 30px 0 0 0;
+}
+
+app-list.contact-details-lis {
+  width: 300px;
+  margin-top: 30px;
+}
+
+app-list.contact-details-list app-list-item {
+  padding: 20px 0;
+}
+
+app-list[appDropdownMenu] {
+  width: 300px;
+}
+
+.name {
+  margin-bottom: 0;
+}
+
+.location {
+  font-size: $global-font-size * 1.2;
+  color: $theme-color-04;
+}
+
+.extra-array span {
+  display: block;
+  font-size: $global-font-size * 1.2;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.extra-text {
+  font-size: $global-font-size * 1.2;
+  color: $theme-color-04;
+}
+
+.contact-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  app-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}

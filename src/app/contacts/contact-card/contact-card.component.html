@@ -6,7 +6,7 @@
 
     <div class="contact-info">
 
-      <span class="contact-info-name" [ngClass]="{'has-unread-messages': hasUnreadMessages}">{{ contact.name }}</span>
+      <span class="contact-info-name" [ngClass]="{'has-unread-messages': hasUnreadMessages}">{{ contact.name | sliceChars:20 }}</span>
 
       <span class="contact-info-meta">35 min ago</span>
 

@@ -16,3 +16,31 @@ app-main-content {
   height: 100%;
   overflow-y: auto;
 }
+
+app-topbar-section[right] {
+  &:first-child {
+    border-left: 1px solid $global-border-color;
+    border-right: 1px solid $global-border-color;
+  }
+  border-right: 1px solid $global-border-color;
+}
+
+app-topbar-section[hasDropdown] {
+  position: relative;
+
+  app-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+
+}
+
+app-user-menu {
+  width: 300px;
+}
+
+// TODO: Passing css class into backdrop doesn't work
+.demo-backdrop {
+  background: rgba(0,0,0,.7) !important;
+}

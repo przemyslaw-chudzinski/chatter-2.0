@@ -1,0 +1,25 @@
+.dropdown-menu {
+
+  .dropdown-menu-item {
+
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background: $theme-color-02;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      font-size: $global-font-size * 1.2;
+
+      app-icon {
+        margin-right: 10px;
+      }
+
+    }
+
+  }
+
+}

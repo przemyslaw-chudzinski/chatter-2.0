@@ -8,15 +8,16 @@ import { MenuItemComponent } from './menu/menu-item/menu-item.component';
 import {TopbarModule} from './topbar/topbar.module';
 import {UiModule} from '../ui/ui.module';
 import {RouterModule} from '@angular/router';
+import { UserMenuComponent } from './user-menu/user-menu.component';
 
 @NgModule({
-  declarations: [LayoutComponent, AsideComponent, MainContentComponent, MenuComponent, MenuItemComponent],
+  declarations: [LayoutComponent, AsideComponent, MainContentComponent, MenuComponent, MenuItemComponent, UserMenuComponent],
   imports: [
     CommonModule,
     TopbarModule,
     UiModule,
     RouterModule
   ],
-  exports: [LayoutComponent, TopbarModule]
+  exports: [LayoutComponent, TopbarModule, UserMenuComponent]
 })
 export class LayoutModule { }
