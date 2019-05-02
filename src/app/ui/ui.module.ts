@@ -7,8 +7,19 @@ import {AvatarModule} from './avatar/avatar.module';
 import {PipesModule} from './pipes/pipes.module';
 import {DirectivesModule} from './directives/directives.module';
 import {CardModule} from './card/card.module';
+import {ListModule} from './list/list.module';
 
 @NgModule({
-  exports: [BadgeModule, InputModule, IconModule, TabsModule, AvatarModule, PipesModule, DirectivesModule, CardModule]
+  exports: [
+    BadgeModule,
+    InputModule,
+    IconModule,
+    TabsModule,
+    AvatarModule,
+    PipesModule,
+    DirectivesModule,
+    CardModule,
+    ListModule
+  ]
 })
 export class UiModule { }

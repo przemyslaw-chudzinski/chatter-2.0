@@ -13,11 +13,36 @@ app-avatar {
   margin: 30px 0 0 0;
 }
 
+app-list {
+  width: 300px;
+  margin-top: 30px;
+}
+
+app-list-item {
+  padding: 20px 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid $global-border-color;
+  }
+}
+
 .name {
   margin-bottom: 0;
 }
 
 .location {
+  font-size: $global-font-size * 1.2;
+  color: $theme-color-04;
+}
+
+.extra-array span {
+  display: block;
+  font-size: $global-font-size * 1.2;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.extra-text {
   font-size: $global-font-size * 1.2;
   color: $theme-color-04;
 }

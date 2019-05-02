@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+:host /deep/ app-list-item {
+
+  &:not(:last-child) {
+    //margin-bottom: 20px;
+  }
+
+}

@@ -3,3 +3,21 @@
 <h1 class="name">Przemysław Chudziński</h1>
 
 <p class="location">Los Angeles, California</p>
+
+<app-list>
+
+  <app-list-item *ngFor="let info of contactInfo">
+
+    <strong>{{ info.key }}:</strong>
+
+    <span *ngIf="!isArray(info.value);" class="extra-text" extra>{{ info.value }}</span>
+
+    <div class="extra-array" *ngIf="isArray(info.value)" extra>
+
+      <span *ngFor="let element of info.value" class="extra-text">{{ element }}</span>
+
+    </div>
+
+  </app-list-item>
+
+</app-list>
