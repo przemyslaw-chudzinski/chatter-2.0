@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { WithBorderBottomDirective } from './with-border-bottom.directive';
 
 @NgModule({
-  declarations: [ListComponent, ListItemComponent],
+  declarations: [ListComponent, ListItemComponent, WithBorderBottomDirective],
   exports: [
     ListComponent,
-    ListItemComponent
+    ListItemComponent,
+    WithBorderBottomDirective
   ],
   imports: [
     CommonModule

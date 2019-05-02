@@ -4,7 +4,37 @@
 
 <p class="location">Los Angeles, California</p>
 
-<app-list>
+<button class="contact-menu" [appDropdownTriggerFor]="contactDetailsMenu">
+
+  <app-icon iconName="more_vert"></app-icon>
+
+  <app-dropdown #contactDetailsMenu>
+
+    <app-list appDropdownMenu>
+
+      <app-list-item appDropdownMenuItem>
+
+        <app-icon appThemeProvider theme="secondary" iconName="phone"></app-icon>
+
+        <span>Call</span>
+
+      </app-list-item>
+
+      <app-list-item appDropdownMenuItem>
+
+        <app-icon appThemeProvider theme="secondary" iconName="block"></app-icon>
+
+        <span>Block</span>
+
+      </app-list-item>
+
+    </app-list>
+
+  </app-dropdown>
+
+</button>
+
+<app-list class="contact-details-list" appWithBorderBottom>
 
   <app-list-item *ngFor="let info of contactInfo">
 

@@ -29,11 +29,21 @@
    </app-topbar-section>
 
     <app-topbar-section right>
-      notifications btn
+
+      notification button
+
     </app-topbar-section>
 
-    <app-topbar-section right>
-      user dropdown menu
+    <app-topbar-section hasDropdown right>
+
+      <button [appDropdownTriggerFor]="notificationsDropdown">Przemyslaw Chudziński</button>
+
+      <app-dropdown #notificationsDropdown backdropClass="demo-backdrop">
+
+        <app-user-menu [dropdownRef]="notificationsDropdown"></app-user-menu>
+
+      </app-dropdown>
+
     </app-topbar-section>
 
   </app-topbar>

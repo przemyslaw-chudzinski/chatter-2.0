@@ -5,6 +5,7 @@
   flex-flow: column;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 app-avatar {
@@ -13,16 +14,17 @@ app-avatar {
   margin: 30px 0 0 0;
 }
 
-app-list {
+app-list.contact-details-lis {
   width: 300px;
   margin-top: 30px;
 }
 
-app-list-item {
+app-list.contact-details-list app-list-item {
   padding: 20px 0;
-  &:not(:last-child) {
-    border-bottom: 1px solid $global-border-color;
-  }
+}
+
+app-list[appDropdownMenu] {
+  width: 300px;
 }
 
 .name {
@@ -45,4 +47,17 @@ app-list-item {
 .extra-text {
   font-size: $global-font-size * 1.2;
   color: $theme-color-04;
+}
+
+.contact-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  app-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
 }

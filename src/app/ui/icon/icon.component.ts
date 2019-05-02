@@ -1,6 +1,5 @@
-import {Component, HostBinding, Inject, Input} from '@angular/core';
+import {Component, Inject, Input} from '@angular/core';
 import {ICON_DEFINITION_TOKEN} from './icon-definitions/icon-definition-token';
-import {ThemeColor} from '../types/theme-color.types';
 
 @Component({
   selector: 'app-icon',
@@ -10,15 +9,6 @@ import {ThemeColor} from '../types/theme-color.types';
 export class IconComponent {
 
   @Input() iconName: string = null;
-  @Input() color: ThemeColor = null;
-
-  @HostBinding('class')
-  get cssClasses() {
-    switch (this.color) {
-      case 'primary': return 'theme-primary';
-      case 'secondary': return 'theme-secondary';
-    }
-  }
 
   constructor(@Inject(ICON_DEFINITION_TOKEN) private iconDefinition: any) {}
 

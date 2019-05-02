@@ -1,0 +1,12 @@
+<ng-container *ngIf="opened">
+
+  <app-backdrop *ngIf="hasBackdrop" [class]="backdropClass" (click)="close($event)"></app-backdrop>
+
+  <div class="body">
+
+    <ng-content></ng-content>
+
+  </div>
+
+</ng-container>
+

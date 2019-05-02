@@ -8,6 +8,9 @@ import {PipesModule} from './pipes/pipes.module';
 import {DirectivesModule} from './directives/directives.module';
 import {CardModule} from './card/card.module';
 import {ListModule} from './list/list.module';
+import {DropdownModule} from './dropdown/dropdown.module';
+import {BackdropModule} from './backdrop/backdrop.module';
+import {MenuModule} from './menu/menu.module';
 
 @NgModule({
   exports: [
@@ -19,7 +22,10 @@ import {ListModule} from './list/list.module';
     PipesModule,
     DirectivesModule,
     CardModule,
-    ListModule
+    ListModule,
+    DropdownModule,
+    BackdropModule,
+    MenuModule
   ]
 })
 export class UiModule { }

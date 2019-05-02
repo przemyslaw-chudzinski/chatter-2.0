@@ -1,0 +1,9 @@
+.list-with-border-bottom {
+
+  app-list-item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $global-border-color;
+    }
+  }
+
+}

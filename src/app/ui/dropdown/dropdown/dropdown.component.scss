@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+.body {
+  position: relative;
+  z-index: 600;
+  background: #fff;
+  min-width: 200px;
+  min-height: 100px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
