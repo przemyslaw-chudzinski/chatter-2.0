@@ -1,4 +1,4 @@
-<app-contacts-list>
+<app-card>
 
   <nav *ngIf="contactFilters && contactFilters.length" theme="primary" appTabNavBar header>
 
@@ -8,13 +8,10 @@
 
   <div *ngIf="contactLists && contactLists.length">
 
-    <app-contact-card *ngFor="let contact of contactLists" [contact]="contact" [online]="contact.online"></app-contact-card>
+    <app-contact-card *ngFor="let contact of contactLists" [contact]="contact" [online]="contact.online" [routerLink]="['member', '123']"></app-contact-card>
 
   </div>
 
-</app-contacts-list>
+</app-card>
 
 <router-outlet></router-outlet>
-
-<!--<div style="height: 100%; flex-grow: 1">messages</div>-->
-<!--<div style="width: 300px;">contact profile info</div>-->
